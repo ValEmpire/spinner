@@ -1,8 +1,36 @@
-const character = ['|', '/', '-', '\\', '|', '/', '-', '\\', '|', '\n'];
+setTimeout(() => {
+  process.stdout.write('\r|   ');
+}, 100);
 
+setTimeout(() => {
+  process.stdout.write('\r/   ');
+}, 300);
 
-for (let i = 0; i < character.length; i++) {
-  setTimeout(() => {
-    process.stdout.write('\r'+ character[i] +'   ');
-  }, (i + 1) * 100);
-}
+setTimeout(() => {
+  process.stdout.write('\r-   ');
+}, 500);
+
+setTimeout(() => {
+  // Need to escape the backslash since it's a special character.
+  process.stdout.write('\r\\   '); 
+}, 700);
+
+setTimeout(() => {
+  process.stdout.write('\r|   '); 
+}, 900);
+
+setTimeout(() => {
+  process.stdout.write('\r/   '); 
+}, 1100);
+
+setTimeout(() => {
+  process.stdout.write('\r-   '); 
+}, 1300);
+
+setTimeout(() => {
+  process.stdout.write('\r\\   '); 
+}, 1500);
+
+setTimeout(() => {
+  process.stdout.write('\r|   '); 
+}, 1700);
